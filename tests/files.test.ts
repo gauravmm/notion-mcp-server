@@ -601,6 +601,10 @@ describe("upload_file (attach_to)", () => {
       attach_to: { block_id: "page-1" },
     });
     expect(notionStub.blocks.children.append.mock.calls[0][0].children[0].type).toBe("pdf");
+  });
+});
+
+// ──────────────────────────────────────────────────────────────────────────
 // upload_file: NOTION_UPLOAD_ROOT
 // ──────────────────────────────────────────────────────────────────────────
 

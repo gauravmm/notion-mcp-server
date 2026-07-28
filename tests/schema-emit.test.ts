@@ -53,6 +53,9 @@ describe("emitJsonSchema $defs bodies", () => {
     expect(defs.branch.$ref).toBeUndefined();
     expect(defs.branch.properties.leaf).toEqual({ $ref: "#/$defs/leaf" });
     expect(defs.leaf.properties.url.type).toBe("string");
+  });
+});
+
 describe("BLOCK_INPUT_SCHEMA", () => {
   it("takes any block whose body matches its type", () => {
     for (const block of [
