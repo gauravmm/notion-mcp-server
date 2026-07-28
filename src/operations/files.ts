@@ -207,7 +207,7 @@ function blockTypeFor(contentType: string): "image" | "video" | "audio" | "pdf" 
 }
 
 const AttachToSchema = z.object({
-  block_id: z.string().describe("Page or block to append the uploaded file to."),
+  block_id: notionId().describe("Page or block to append the uploaded file to."),
   caption: z.string().optional().describe("Caption for the new block."),
   position: z
     .enum(["start", "end"])
